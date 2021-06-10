@@ -6,16 +6,18 @@
     "description": "Enhancements for using Canvas at the University of Auckland.",
       
     "content_scripts": [
-        {
-          "matches": ["*://mediaplayer.auckland.ac.nz/*"],
-          "js": ["arrive.min.js", "videoenhance.js"],
-          "css": ["video.css"]
-        },
-        {
-          "matches": ["*://learningtools.auckland.ac.nz/ltr/home/index/*"],
-          "js": ["arrive.min.js", "course.js"],
-          "all_frames": true
-        }
-      ]
-  
+      {
+        "matches": ["*://mediaplayer.auckland.ac.nz/*"],
+        "js": ["arrive.min.js", "videoenhance.js"],
+        "css": ["video.css"]
+      },
+      {
+        "matches": ["*://learningtools.auckland.ac.nz/ltr/home/index/*"],
+        "js": ["arrive.min.js", "course.js"],
+        "all_frames": true
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    }
   }

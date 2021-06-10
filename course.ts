@@ -13,23 +13,22 @@ let hasInit = false;
 
 document.body.style.border = "5px solid red";
 
-document.arrive("#recordings", function () {
+var btnContainer = document.getElementById("toggleViewButton")?.parentElement;
+if (btnContainer == null) {
+    throw new Error("Could not find button container!");
+}
+var btn = document.createElement("button");
+btn.innerText = "Open with Easel";
+btnContainer.appendChild(btn);
+btn.onclick = function() {    
 
-    if (!hasInit) {
-        hasInit = true;
+    // Do web scraping and load
+    
 
-        var btnContainer = document.getElementById("toggleViewButton")?.parentElement;
-        if (btnContainer == null) {
-            throw new Error("Could not find button container!");
-        }
-        var btn = document.createElement("button");
-        btn.innerText = "Open with Easel";
-        btnContainer.appendChild(btn);
-        btn.onclick = function() {
-            if (confirm("Would you like to view this course in Easel?")) {
-                // Do web scraping and load
-                alert("Loading!");
-            }
-        }
-    }
-})
+    // confirm("Would you like to view this course in Easel?"))
+    browser.runtime.sendMessage("open");
+}
+
+// document.arrive("#recordings", function () {
+    
+// })
