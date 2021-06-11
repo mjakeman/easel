@@ -1,5 +1,7 @@
 import {Course, Recording, Message, MessageType} from "./shared";
 
+const useSessionStorage = false;
+
 function printElement(text: string) {
     let p = document.createElement("p");
     p.innerText = text;
@@ -7,13 +9,43 @@ function printElement(text: string) {
     document.body.append(document.createElement("br"));
 }
 
-function addToSidebar(recording: Recording) {
-    return `<a class="sidebar-item" target="video-frame" href=${recording.url}>${recording.title}</a>`;
+function addToSidebar(sidebar: HTMLElement, recording: Recording) {
+    let template = document.createElement("template");
+    let sidebarHtml = `<a class="sidebar-item" target="video-frame" href=${recording.url}>${recording.title}</a>`.trim();
+    template.innerHTML = sidebarHtml;
+    let anchor = template.content.firstChild as HTMLAnchorElement;
+    if (anchor != null) {
+        sidebar.appendChild(anchor);
+        anchor.onclick = function () {
+            // Remove style from previously selected element
+            let prevSelected = document.getElementsByClassName("selected");
+            for (let i = 0; i < prevSelected.length; i++) {
+                prevSelected[i].classList.remove("selected");
+            }
+
+            // Add to this
+            anchor.classList.add("selected");
+        };
+    }
+    
 }
 
 function retrieveCourseData(): Course|null {
     
     const key = "courseData";
+
+    // This override lets us keep data permanently (nice for development)
+    // It's problematic though as it means we can't have multiple easel
+    // instances open :/
+    if (!useSessionStorage) {
+        try {
+            // Try parse course data.
+            let course: Course = JSON.parse(localStorage.courseData);
+            return course;
+        } catch (e) {
+            return null;
+        }
+    }
 
     // First check local storage. This is populated by
     // background.ts when it loads easel.
@@ -52,8 +84,11 @@ function initEasel() {
         return;
     }
 
+    const elementSidebar = document.getElementById("sidebar")!;
+
     for (let i = 0; i < course.lectures.length; i++) {
-        printElement(course.lectures[i].url);
+        // printElement(course.lectures[i].url);
+        addToSidebar(elementSidebar, course.lectures[i]);
     }
 }
 

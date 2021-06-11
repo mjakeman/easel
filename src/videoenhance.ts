@@ -62,6 +62,7 @@ function load() {
 
     // Setup Nav
     let nav = document.createElement("nav");
+    nav.id = "video-enhance-nav";
     nav.innerHTML = "<p>Easel - Video Enhancer for Canvas</p><p class='credit'>Created by <a href='https://www.mattjakeman.com' target='_blank'>Matt Jakeman</a></p>";
     context_add(cx, nav);
 

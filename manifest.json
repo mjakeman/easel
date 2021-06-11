@@ -7,9 +7,10 @@
       
     "content_scripts": [
       {
-        "matches": ["*://mediaplayer.auckland.ac.nz/*"],
+        "matches": ["*://mediaplayer.auckland.ac.nz/*", "*://mediastore.auckland.ac.nz/*"],
         "js": ["dist/videoenhance.js"],
-        "css": ["css/video.css"]
+        "css": ["css/video.css"],
+        "all_frames": true
       },
       {
         "matches": ["*://learningtools.auckland.ac.nz/ltr/home/index/*"],
