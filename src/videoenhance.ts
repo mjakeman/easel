@@ -1,3 +1,5 @@
+import "arrive";
+
 let init = false;
 
 type Context = {

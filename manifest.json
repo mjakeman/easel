@@ -8,16 +8,16 @@
     "content_scripts": [
       {
         "matches": ["*://mediaplayer.auckland.ac.nz/*"],
-        "js": ["arrive.min.js", "videoenhance.js"],
-        "css": ["video.css"]
+        "js": ["dist/videoenhance.js"],
+        "css": ["css/video.css"]
       },
       {
         "matches": ["*://learningtools.auckland.ac.nz/ltr/home/index/*"],
-        "js": ["arrive.min.js", "course.js"],
+        "js": ["dist/course.js"],
         "all_frames": true
       }
     ],
     "background": {
-      "scripts": ["background.js"]
+      "scripts": ["dist/background.js"]
     }
   }
