@@ -7,18 +7,50 @@ function printElement(text: string) {
     document.body.append(document.createElement("br"));
 }
 
+function addToSidebar(recording: Recording) {
+    return `<a class="sidebar-item" target="video-frame" href=${recording.url}>${recording.title}</a>`;
+}
+
+function retrieveCourseData(): Course|null {
+    
+    const key = "courseData";
+
+    // First check local storage. This is populated by
+    // background.ts when it loads easel.
+    try {
+        // Try parse course data. If sucessful, store in sessionData for later use.
+        let course: Course = JSON.parse(localStorage.courseData);
+        sessionStorage.setItem(key, localStorage.courseData);
+        return course;
+    } catch (e) {
+        console.log("Course not in local storage -> Checking session storage instead");
+    } finally {
+        // Clear local storage regardless of result
+        delete localStorage.courseData;
+    }
+
+    // Next check session storage. We store course data here
+    // so it can survive page reloads.
+    try {
+        let courseStr = sessionStorage.getItem(key);
+        let course: Course = JSON.parse(courseStr!);
+        return course;
+    } catch (e) {
+        // Not found, return null and propagate error to caller
+        return null;
+    }
+}
+
 function initEasel() {
     // alert("Initialising");
 
-    let course: Course;
-    try {
-        course = JSON.parse(localStorage.sharedData);
-    } catch (e) {
+    let course = retrieveCourseData();
+
+    if (course == null) {
         console.error("Failed to start Easel! Aborting");
-        printElement("Failed to start Easel! Make sure you access this page directly from Canvas");
+        printElement("Failed to start Easel! Please try reopening this page directly from Canvas's lecture recordings tab.");
         return;
     }
-    delete localStorage.sharedData;
 
     for (let i = 0; i < course.lectures.length; i++) {
         printElement(course.lectures[i].url);

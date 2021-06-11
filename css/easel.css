@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    width: 30%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.sidebar-item {
+    
+}
+
+main {
+    width: 70%;
+    box-sizing: border-box;
+    overflow: hidden;
+}

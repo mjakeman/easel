@@ -3,7 +3,7 @@ import { browser } from "webextension-polyfill-ts";
 
 function openEasel(message: Message) {
     if (message.type === MessageType.OPEN) {
-        localStorage.sharedData = JSON.stringify(message.course);
+        localStorage.courseData = JSON.stringify(message.course);
         browser.tabs.create({"url": "/html/easel.html"});
     }
 }
