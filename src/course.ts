@@ -3,7 +3,7 @@ import {Course, Recording, Message, MessageType} from "./shared";
 
 let hasInit = false;
 
-document.body.style.border = "5px solid red";
+document.body.style.border = "2px solid #53FEBE";
 
 let btnContainer = document.getElementById("toggleViewButton")?.parentElement;
 if (btnContainer == null) {
@@ -12,6 +12,12 @@ if (btnContainer == null) {
 let btn = document.createElement("button");
 btn.innerText = "Open with Easel";
 btnContainer.appendChild(btn);
+btn.style.border = "1px solid #53FEBE";
+btn.style.borderBottom = "3px solid #53FEBE";
+btn.style.backgroundColor = "#B3FFE3";
+btn.style.borderRadius = "4px";
+btn.style.padding = "5px";
+btn.style.cursor = "pointer";
 btn.onclick = function() {    
 
     // Do web scraping and load

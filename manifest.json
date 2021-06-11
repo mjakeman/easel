@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Easel for Canvas (UoA)",
-    "version": "1.0",
+    "name": "Easel - Lecture Recordings (UoA)",
+    "version": "0.1",
     "author": "Matt Jakeman",
-    "description": "Enhancements for using Canvas at the University of Auckland.",
+    "description": "Enhancements for using Canvas and Lecture Recordings at the University of Auckland.",
       
     "content_scripts": [
       {
