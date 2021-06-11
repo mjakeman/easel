@@ -29,4 +29,7 @@ jobs:
     - run: npm run build --if-present
     
     - name: Build Web Extension (Firefox)
-      run: npm install --global web-ext && web-ext build
+      run: npm install --global web-ext && web-ext build --no-config-discovery
+
+    - name: Validate Web Extension (Firefox)
+      run: web-ext lint --no-config-discovery

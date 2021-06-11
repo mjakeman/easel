@@ -4,6 +4,12 @@
     "version": "0.1",
     "author": "Matt Jakeman",
     "description": "Enhancements for using Canvas and Lecture Recordings at the University of Auckland.",
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "easel@mattjakeman.com"
+      }
+    },    
       
     "content_scripts": [
       {
