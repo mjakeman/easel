@@ -23,7 +23,7 @@ function addToSidebar(sidebar: HTMLElement, recording: Recording) {
                 prevSelected[i].classList.remove("selected");
             }
 
-            // Add to this
+            // Add to the clicked-on element
             anchor.classList.add("selected");
         };
     }
