@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.Frame {
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: blue;
+}
+
+.HelloWorld {
+    
+}

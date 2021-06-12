@@ -1,4 +1,6 @@
 import "arrive";
+import { browser } from "webextension-polyfill-ts";
+import { InitMessage, MessageType } from "./shared";
 
 let init = false;
 
@@ -50,45 +52,43 @@ function load() {
 
     console.log("Hello!");
 
-    // Get video player
-    const videoplayer = document.getElementById("video") as HTMLVideoElement;
-    if (videoplayer === null) {
-        console.error("Video not found!");
-        return;
-    }
+    let msg: InitMessage = {
+        type: MessageType.INIT
+    };
+    browser.runtime.sendMessage(msg);
 
-    // Create our container (context object)
-    let cx = context_create(videoplayer);
+    // // Create our container (context object)
+    // let cx = context_create(videoplayer);
 
-    // Setup Nav
-    /*let nav = document.createElement("nav");
-    nav.innerHTML = "<p>Easel - Video Enhancer for Canvas</p><p class='credit'>Created by <a href='https://www.mattjakeman.com' target='_blank'>Matt Jakeman</a></p>";
-    context_add(cx, nav);*/
+    // // Setup Nav
+    // /*let nav = document.createElement("nav");
+    // nav.innerHTML = "<p>Easel - Video Enhancer for Canvas</p><p class='credit'>Created by <a href='https://www.mattjakeman.com' target='_blank'>Matt Jakeman</a></p>";
+    // context_add(cx, nav);*/
 
-    // Setup Video
-    videoplayer.controls = true;
-    context_add(cx, videoplayer);
+    // // Setup Video
+    // videoplayer.controls = true;
+    // context_add(cx, videoplayer);
 
-    // Setup Shortcuts
-    let s1 = create_shortcut(cx, "Skip Copyright Message (42s)", 42);
-    context_add(cx, s1);
+    // // Setup Shortcuts
+    // let s1 = create_shortcut(cx, "Skip Copyright Message (42s)", 42);
+    // context_add(cx, s1);
 
-    let s2 = create_shortcut(cx, "First 5 Minutes", 5*60);
-    context_add(cx, s2);
+    // let s2 = create_shortcut(cx, "First 5 Minutes", 5*60);
+    // context_add(cx, s2);
 
-    let s3 = create_shortcut_expression(cx, "Halfway", function (cur, len) { return len/2; });
-    context_add(cx, s3);
+    // let s3 = create_shortcut_expression(cx, "Halfway", function (cur, len) { return len/2; });
+    // context_add(cx, s3);
 
-    let s4 = create_shortcut_expression(cx, "Last 5 Minutes", function (cur, len) { return len - (5*60); });
-    context_add(cx, s4);
+    // let s4 = create_shortcut_expression(cx, "Last 5 Minutes", function (cur, len) { return len - (5*60); });
+    // context_add(cx, s4);
 
-    let s5 = create_shortcut_expression(cx, "-10s", function (cur, len) { return cur - 10; });
-    context_add(cx, s5);
+    // let s5 = create_shortcut_expression(cx, "-10s", function (cur, len) { return cur - 10; });
+    // context_add(cx, s5);
 
-    let s6 = create_shortcut_expression(cx, "+30s", function (cur, len) { return cur + 30; });
-    context_add(cx, s6);
+    // let s6 = create_shortcut_expression(cx, "+30s", function (cur, len) { return cur + 30; });
+    // context_add(cx, s6);
 
-    // TODO: GIT COMMIT FIRST
+    // // TODO: GIT COMMIT FIRST
     
 }
 

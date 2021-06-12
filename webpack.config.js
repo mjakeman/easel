@@ -6,7 +6,9 @@ module.exports = {
         course: './src/course.ts',
         easel: './src/easel.ts',
         background: './src/background.ts',
-        videoenhance: './src/videoenhance.ts'
+        videoenhance: './src/videoenhance.ts',
+        inject: './src/inject.ts',
+        reactapp: './src/app.tsx',
     },
     devtool: 'inline-source-map',
     module: {
@@ -16,6 +18,21 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            sourceMap: true
+                        }
+                    }
+                ]
+            }
         ],
     },
     resolve: {

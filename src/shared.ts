@@ -12,11 +12,16 @@ export type Course = {
     lectures: Recording[]
 }
 
-export type Message = {
+export type OpenMessage = {
     type: MessageType,
     course: Course
 }
 
+export type InitMessage = {
+    type: MessageType,
+}
+
 export enum MessageType {
-    OPEN
+    OPEN,
+    INIT
 }

@@ -27,5 +27,10 @@
     "background": {
       "scripts": ["dist/background.js"]
     },
+    "permissions": [
+      "*://mediaplayer.auckland.ac.nz/*",
+      "*://mediastore.auckland.ac.nz/*",
+      "tabs"
+    ],
     "web_accessible_resources": ["html/easel.html"]
   }
