@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Easel - Lecture Recordings (UoA)",
-    "version": "0.2",
+    "version": "0.2.1",
     "author": "Matt Jakeman",
     "description": "An unofficial enhancement suite for watching Lecture Recordings at the University of Auckland.",
 
@@ -14,13 +14,13 @@
     "content_scripts": [
       {
         "matches": ["*://mediaplayer.auckland.ac.nz/*", "*://mediastore.auckland.ac.nz/*"],
-        "js": ["dist/videoenhance.js"],
+        "js": ["dist/video.js"],
         "css": ["css/video.css"],
         "all_frames": true
       },
       {
         "matches": ["*://learningtools.auckland.ac.nz/ltr/home/index/*"],
-        "js": ["dist/course.js"],
+        "js": ["dist/recordings.js"],
         "all_frames": true
       }
     ],
@@ -34,5 +34,5 @@
       "unlimitedStorage",
       "storage"
     ],
-    "web_accessible_resources": ["html/easel.html", "html/error.html"]
+    "web_accessible_resources": ["html/error.html"]
   }

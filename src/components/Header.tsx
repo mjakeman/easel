@@ -10,6 +10,9 @@ export class Header extends React.Component<HeaderProps, {}> {
         let courseText = (this.props.courseName !== undefined)
             ? "(" + this.props.courseName + ")"
             : "";
-        return <h1 className={Style.Header}>Easel - Lecture Recording Manager {courseText}</h1>;
+        return <header className={Style.Header}>
+                <h1 className={Style.HeaderText}>Easel - Lecture Recording Manager {courseText}</h1>
+                <p className={Style.HeaderCredit}>Created by <a href="https://www.mattjakeman.com/">Matt Jakeman</a></p>
+            </header>;
     }
 }

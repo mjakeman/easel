@@ -3,11 +3,15 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        course: './src/course.ts',
-        easel: './src/easel.ts',
+        // Background Scripts
         background: './src/background.ts',
-        videoenhance: './src/videoenhance.ts',
         inject: './src/inject.ts',
+
+        // Page Helper Scripts
+        recordings: './src/recordings.ts',
+        video: './src/video.ts',
+
+        // Easel React App
         reactapp: './src/app.tsx',
     },
     devtool: 'inline-source-map',

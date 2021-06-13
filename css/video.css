@@ -3,62 +3,7 @@
     margin: 0;
 }
 
+/* Make the background black so changing pages is not as jarring */
 body {
     background: black;
 }
-
-/*.video-container {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    // border: 5px solid blue;
-    box-sizing: border-box;
-    background-color: #222;
-}
-
-.video-container button {
-    background-color: #111;
-    color: white;
-    padding: 8px;
-    margin: 5px;
-    border: 1px solid black;
-    border-bottom: 3px solid black;
-    border-radius: 2px;
-    transition: background-color 0.15s ease-out;
-}
-
-.video-container button:hover {
-    background-color: #222;
-}
-
-.video-container button:active {
-    background-color: #222;
-    border-bottom: 1px solid black;
-    position: relative;
-    top: 2px;
-}
-
-video {
-    display: block;
-    height: 80%;
-    background-color: black;
-}
-
-nav {
-    display: flex;
-    color: white;
-    font-size: 120%;
-    line-height: 120%;
-    padding: 10px 30px;
-    justify-content: space-between;
-}
-
-nav .credit {
-    font-size: 60%;
-    display: inline;
-    color: rgba(255,255,255,0.4) !important;
-}
-
-nav .credit a {
-    color: inherit;
-} */
