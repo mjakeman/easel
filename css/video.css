@@ -3,11 +3,15 @@
     margin: 0;
 }
 
-.video-container {
+body {
+    background: black;
+}
+
+/*.video-container {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    /* border: 5px solid blue; */
+    // border: 5px solid blue;
     box-sizing: border-box;
     background-color: #222;
 }
@@ -57,4 +61,4 @@ nav .credit {
 
 nav .credit a {
     color: inherit;
-}
+} */

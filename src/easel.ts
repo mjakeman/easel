@@ -1,4 +1,4 @@
-import {Course, Recording, Message, MessageType} from "./shared";
+import {Course, Recording, OpenMessage, MessageType} from "./shared";
 
 const useSessionStorage = false;
 

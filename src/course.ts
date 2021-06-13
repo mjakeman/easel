@@ -1,5 +1,5 @@
 import { browser } from "webextension-polyfill-ts";
-import {Course, Recording, Message, MessageType} from "./shared";
+import {Course, Recording, OpenMessage, MessageType} from "./shared";
 
 let hasInit = false;
 
@@ -58,7 +58,7 @@ btn.onclick = function() {
     }
 
     // confirm("Would you like to view this course in Easel?"))
-    let msg: Message = {
+    let msg: OpenMessage = {
         type: MessageType.OPEN,
         course: course
     };
