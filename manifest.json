@@ -30,7 +30,9 @@
     "permissions": [
       "*://mediaplayer.auckland.ac.nz/*",
       "*://mediastore.auckland.ac.nz/*",
-      "tabs"
+      "tabs",
+      "unlimitedStorage",
+      "storage"
     ],
-    "web_accessible_resources": ["html/easel.html"]
+    "web_accessible_resources": ["html/easel.html", "html/error.html"]
   }
