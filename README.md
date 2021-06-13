@@ -11,7 +11,7 @@ A suite of enhancements for watching lecture recordings at the University of Auc
 ## Get the Addon
 Currently Easel is only available for Firefox. Chrome and Edge versions are planned - contributions welcome!
 
-<a href="https://github.com/mjakeman/easel/releases/download/v0.2/easel-firefox.xpi" target="_blank">
+<a href="https://github.com/mjakeman/easel/releases/download/v0.2.1/easel-firefox.xpi" target="_blank">
   <img src="fx-addon.png" />
 </a>
 
