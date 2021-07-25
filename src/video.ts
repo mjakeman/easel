@@ -17,11 +17,11 @@ function load() {
 }
 
 // Redirect to mediaplayer
-let url = window.location.href;
+// let url = window.location.href;
 
-if (url.includes("mediastore")) {
-    var newUrl = window.location.href.replace("mediastore", "mediaplayer");
-    window.location.replace(newUrl);
-}
+// if (url.includes("mediastore")) {
+//     var newUrl = window.location.href.replace("mediastore", "mediaplayer");
+//     window.location.replace(newUrl);
+// }
 
 document.arrive("video", load);

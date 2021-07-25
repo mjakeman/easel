@@ -38,6 +38,11 @@ btn.onclick = function() {
         let title = titleAnchor.innerText;
         let url = titleAnchor.href;
 
+        // Replace mediastore URLs with mediaplayer
+        if (url.includes("mediastore")) {
+            url = url.replace("mediastore", "mediaplayer");
+        }
+
         let lectureInfo = lecture.querySelectorAll("td");
         if (lectureInfo === null)
             continue;
