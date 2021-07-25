@@ -1,4 +1,10 @@
 # Easel
+[![CI Build](https://github.com/mjakeman/easel/actions/workflows/node.js.yml/badge.svg)](https://github.com/mjakeman/easel/actions/workflows/node.js.yml)
+![Downloads](https://img.shields.io/github/downloads/mjakeman/easel/total)
+![Version](https://img.shields.io/github/manifest-json/v/mjakeman/easel)
+![Licence](https://img.shields.io/github/license/mjakeman/easel)
+
+
 A suite of enhancements for watching lecture recordings at the University of Auckland.
 
 **easel** (ea•sel ē′zəl)
@@ -11,7 +17,7 @@ A suite of enhancements for watching lecture recordings at the University of Auc
 ## Get the Addon
 Currently Easel is only available for Firefox. Chrome and Edge versions are planned - contributions welcome!
 
-<a href="https://github.com/mjakeman/easel/releases/download/v0.2/easel-firefox.xpi" target="_blank">
+<a href="https://github.com/mjakeman/easel/releases/download/v0.2.1/easel-firefox.xpi" target="_blank">
   <img src="fx-addon.png" />
 </a>
 
@@ -23,17 +29,29 @@ Open the lecture recordings tab on Canvas. If everything is set up correctly, yo
 Click this and you're done! 
 
 ## For Developers
-### Debugging
+### Obtaining the Source
+Clone the repository and install dependencies with `npm`. You will need either node.js 14 or 15 installed for this.
+
+```
+# Clone repository
+$ git clone https://github.com/mjakeman/easel
+
+# Install dependencies
+$ npm install
+```
+
+### Development/Debugging
 Run concurrently (in two separate terminals at the same time):
 ```sh
 # Terminal 1
 $ npm run watch
 
 # Terminal 2
-$ web-ext run
+$ web-ext run --no-config-discovery
 ```
 
 ### Building
 ```sh
-$ web-ext build
+$ npm run build
+$ web-ext build --no-config-discovery
 ```
