@@ -32,4 +32,4 @@ jobs:
       run: npm install --global web-ext && web-ext build --no-config-discovery
 
     - name: Validate Web Extension (Firefox)
-      run: web-ext lint --no-config-discovery
+      run: web-ext lint --self-hosted --no-config-discovery

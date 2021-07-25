@@ -1,13 +1,14 @@
 {
     "manifest_version": 2,
     "name": "Easel - Lecture Recordings (UoA)",
-    "version": "0.2.1",
+    "version": "0.3",
     "author": "Matt Jakeman",
     "description": "An unofficial enhancement suite for watching Lecture Recordings at the University of Auckland.",
 
     "browser_specific_settings": {
       "gecko": {
-        "id": "easel@mattjakeman.com"
+        "id": "easel@mattjakeman.com",
+        "update_url": "https://raw.githubusercontent.com/mjakeman/easel/master/fx-updates.json"
       }
     },    
       

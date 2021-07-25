@@ -8,11 +8,11 @@
         },
         {
           "version": "0.2",
-          "update_link": "https://github.com/mjakeman/easel/releases/download/v0.2/easel-firefox.xpi",
+          "update_link": "https://github.com/mjakeman/easel/releases/download/v0.2/easel-firefox.xpi"
         },
         {
           "version": "0.2.1",
-          "update_link": "https://github.com/mjakeman/easel/releases/download/v0.2.1/easel-firefox.xpi",
+          "update_link": "https://github.com/mjakeman/easel/releases/download/v0.2.1/easel-firefox.xpi"
         }
       ]
     }

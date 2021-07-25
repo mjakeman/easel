@@ -42,6 +42,14 @@
     background-color: #111;
 }
 
+.SidebarItemActive {
+    background: #49bfaa;
+}
+
+.SidebarItemActive:hover {
+    background: rgb(58, 184, 161);
+}
+
 .Sidebar h2,
 .SidebarMessage {
     padding: 0 15px;
