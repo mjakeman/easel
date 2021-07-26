@@ -10,23 +10,22 @@
         "id": "easel@mattjakeman.com",
         "update_url": "https://raw.githubusercontent.com/mjakeman/easel/master/fx-updates.json"
       }
-    },    
-      
+    },
     "content_scripts": [
       {
         "matches": ["*://mediaplayer.auckland.ac.nz/*", "*://mediastore.auckland.ac.nz/*"],
-        "js": ["dist/video.js"],
+        "js": ["dist/browser-polyfill.js", "dist/video.js"],
         "css": ["css/video.css"],
         "all_frames": true
       },
       {
         "matches": ["*://learningtools.auckland.ac.nz/ltr/home/index/*"],
-        "js": ["dist/recordings.js"],
+        "js": ["dist/browser-polyfill.js", "dist/recordings.js"],
         "all_frames": true
       }
     ],
     "background": {
-      "scripts": ["dist/background.js"]
+      "scripts": ["dist/browser-polyfill.js", "dist/background.js"]
     },
     "permissions": [
       "*://mediaplayer.auckland.ac.nz/*",
