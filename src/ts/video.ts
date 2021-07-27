@@ -24,4 +24,13 @@ function load() {
 //     window.location.replace(newUrl);
 // }
 
-document.arrive("video", load);
+// Try get video with an id of '#video'
+var video = document.getElementById('video') as HTMLVideoElement;
+
+// If #video exists, load it
+if (video)
+    load();
+
+// Otherwise, wait until a video element appears
+else
+    document.arrive("video", load);
