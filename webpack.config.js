@@ -5,15 +5,15 @@ module.exports = {
     mode: 'development',
     entry: {
         // Background Scripts
-        background: './src/background.ts',
-        inject: './src/inject.ts',
+        background: './src/ts/background.ts',
+        inject: './src/ts/inject.ts',
 
         // Page Helper Scripts
-        recordings: './src/recordings.ts',
-        video: './src/video.ts',
+        recordings: './src/ts/recordings.ts',
+        video: './src/ts/video.ts',
 
         // Easel React App
-        reactapp: './src/app.tsx',
+        reactapp: './src/ts/app.tsx',
     },
     devtool: 'inline-source-map',
     module: {
@@ -43,16 +43,16 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
-    output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
-    },
     plugins: [
         new CopyPlugin({
             patterns: [{
-              from: 'node_modules/webextension-polyfill/dist/browser-polyfill.js',
-              to: 'browser-polyfill.js'
+                from: 'node_modules/webextension-polyfill/dist/browser-polyfill.js',
+                to: 'browser-polyfill.js'
             }],
         })
-    ]
+    ],
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, 'src/dist'),
+    }
 };
