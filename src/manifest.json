@@ -7,8 +7,7 @@
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "easel@mattjakeman.com",
-      "update_url": "https://raw.githubusercontent.com/mjakeman/easel/master/fx-updates.json"
+      "id": "easel@mattjakeman.com"
     }
   },
   "content_scripts": [
