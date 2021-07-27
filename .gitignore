@@ -2,3 +2,5 @@ node_modules
 src/dist/
 web-ext-artifacts/
 .web-extension-id
+easel.pem
+*.crx
