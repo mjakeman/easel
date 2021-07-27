@@ -57,4 +57,7 @@ $ web-ext build -s src --no-config-discovery
 ```
 
 ### Testing
-In addition to the University's lecture recording infrastructure, easel can also be tested on [easel-mock](https://www.mattjakeman.com/easel/easel-uoa-mock/) which does not need a University-issued account to use. Disclaimer: easel-mock is a simple static website that emulates the layout of the official university tool - it is not associated with the University, does not host any copyrighted material, and does not allow or faciliate bypassing University authentication.
+In addition to the University's lecture recording infrastructure, easel can also be tested on [easel-mock](https://www.mattjakeman.com/easel/easel-uoa-mock/) which does not need a University-issued account to use. It is a simple static website that emulates the layout of the official university tool and provides 'fake data' to test the browser extension.
+
+### Disclaimer
+Easel is not associated with the University. It does not host any copyrighted material and does not allow or faciliate bypassing University authentication in any way, shape, or form. That aside, enjoy! :)
