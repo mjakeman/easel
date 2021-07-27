@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Easel - Lecture Recordings (UoA)",
-  "version": "0.4",
+  "version": "0.4.1",
   "author": "Matt Jakeman",
   "description": "An unofficial enhancement suite for watching Lecture Recordings at the University of Auckland.",
 
