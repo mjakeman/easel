@@ -47,11 +47,11 @@ Run concurrently (in two separate terminals at the same time):
 $ npm run watch
 
 # Terminal 2
-$ web-ext run --no-config-discovery
+$ web-ext run -s src --no-config-discovery
 ```
 
 ### Building
 ```sh
 $ npm run build
-$ web-ext build --no-config-discovery
+$ web-ext build -s src --no-config-discovery
 ```
