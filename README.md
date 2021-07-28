@@ -1,7 +1,8 @@
 # Easel
 [![CI Build](https://github.com/mjakeman/easel/actions/workflows/node.js.yml/badge.svg)](https://github.com/mjakeman/easel/actions/workflows/node.js.yml)
 ![Downloads](https://img.shields.io/github/downloads/mjakeman/easel/total)
-![Version](https://img.shields.io/github/manifest-json/v/mjakeman/easel)
+![Firefox Users](https://img.shields.io/amo/users/easel-uoa?label=firefox%20users)
+![Version](https://img.shields.io/github/manifest-json/v/mjakeman/easel?filename=src%2Fmanifest.json)
 ![Licence](https://img.shields.io/github/license/mjakeman/easel)
 
 
@@ -15,9 +16,9 @@ A suite of enhancements for watching lecture recordings at the University of Auc
 **Note:** This extension simply wraps the existing lecture recording interface. You must be a current student at the University of Auckland in order to use this tool.
 
 ## Get the Addon
-Currently Easel is only available for Firefox. Chrome and Edge versions are planned - contributions welcome!
+Easel is available on Mozilla Addons. A chrome version is in the works, awaiting review for the Chrome Web Store (stay tuned!).
 
-<a href="https://github.com/mjakeman/easel/releases/download/v0.2.1/easel-firefox.xpi" target="_blank">
+<a href="https://addons.mozilla.org/en-GB/firefox/addon/easel-uoa/" target="_blank">
   <img src="img/fx-addon.png" />
 </a>
 
