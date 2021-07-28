@@ -22,10 +22,10 @@ jobs:
     - run: npm run build --if-present
     
     - name: Build Web Extension (Firefox)
-      run: npm install --global web-ext && web-ext --no-config-discovery build
+      run: npm install --global web-ext && web-ext -s src --no-config-discovery build
       
     - name: Sign Web Extension (Firefox)
-      run: web-ext sign --api-key=${{ secrets.WEB_EXT_API_KEY }} --api-secret=${{ secrets.WEB_EXT_API_SECRET }} --no-config-discovery
+      run: web-ext sign -s src --api-key=${{ secrets.WEB_EXT_API_KEY }} --api-secret=${{ secrets.WEB_EXT_API_SECRET }} --no-config-discovery
 
     - name: Upload Firefox Build Artifact
       uses: actions/upload-artifact@v2

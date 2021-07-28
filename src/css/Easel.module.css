@@ -57,6 +57,10 @@
 
 /* Note: Styling for the <video> element is inline inside Video.tsx */
 
+.VideoContainer {
+    width: 100%;
+}
+
 .VideoPlayer {
     background-color: black;
     width: 100%;

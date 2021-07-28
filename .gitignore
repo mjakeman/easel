@@ -1,4 +1,6 @@
 node_modules
-dist/
+src/dist/
 web-ext-artifacts/
 .web-extension-id
+easel.pem
+*.crx

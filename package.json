@@ -20,6 +20,9 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "@types/webextension-polyfill": "^0.8.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "webextension-polyfill": "^0.8.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   },

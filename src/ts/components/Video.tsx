@@ -14,7 +14,7 @@ export class Video extends React.Component<{}, {}> {
         shortcuts.push(<VideoShortcut key="s5" label="-10s" expression={(t, d) => t-10 }/>);
         shortcuts.push(<VideoShortcut key="s6" label="+30s" expression={(t, d) => t+30 }/>);
 
-        return <div className={Style.Video}>
+        return <div className={Style.VideoContainer}>
             <VideoPlayer />
             <div className={Style.VideoShortcutBox}>
                 {shortcuts}
